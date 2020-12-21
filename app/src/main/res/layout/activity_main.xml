@@ -13,5 +13,5 @@
         app:layoutManager="LinearLayoutManager"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp"
-        tools:listitem="@layout/item_content" />
+        tools:listitem="@layout/list_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

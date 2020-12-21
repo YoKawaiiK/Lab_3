@@ -1,5 +1,6 @@
 package com.example.lab_3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         setupRecyclerView((RecyclerView) recyclerView);
     }
 
+    private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
+        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, DummyContent.ITEMS));
+    }
 
     // Адаптер для RecyclerView
     public static class SimpleItemRecyclerViewAdapter
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item_content, parent, false);
+                    .inflate(R.layout.list_item, parent, false);
             return new ViewHolder(view);
         }
 
