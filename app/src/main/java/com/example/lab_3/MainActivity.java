@@ -40,6 +40,20 @@ public class MainActivity extends AppCompatActivity {
             mParentActivity = parent;
         }
 
+        // Слушатели кликов по элементам списка
+        private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
+                Context context = view.getContext();
+                Intent intent = new Intent(context, DetailActivity.class);
+
+                intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, item.id);
+                context.startActivity(intent);
+
+            }
+        };
 
         // возвращает объект ViewHolder
         @Override
