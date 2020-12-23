@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             return new ViewHolder(view);
         }
 
-        // выполняет привязку объекта ViewHolder к объекту Phone по определенной позиции
+        // выполняет привязку объекта ViewHolder к объекту по определенной позиции
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mIdView.setText(mValues.get(position).id);
